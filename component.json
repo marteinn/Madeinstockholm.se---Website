@@ -1,0 +1,25 @@
+{
+  "name": "mis-website",
+  "version": "1.0.0",
+  "devDependencies": {
+  	"retina.js-js": "*"
+  },
+
+  "exportsOverride": {
+  	"retina.js-js": {
+  		"js": "src/retina.js"
+  	},
+
+  	"preboot": {
+  		"less": "less/*.less"
+  	},
+
+  	"jquery": {
+  		"js": ["jquery.js", "jquery.min.js"]
+  	},
+
+  	"modernizr": {
+  		"js": "modernizr.js"
+  	}
+  }
+}
