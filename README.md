@@ -1,9 +1,10 @@
-Madeinstockholm.se---Website
+Madeinstockholm.se - Website
 ============================
 
-MadeInStockholm.se website, written in Python and Flask.
+MadeInStockholm.se website, written in Python and Flask. We decided to open this project as an example on how you can utilize flask+flask-admin as a static site generator and showcase a S3 deploy workflow.
 
-Made sure you have python, node and virtualenv installed.
+# Requirement
+You need to have Python, pip, virtualenv and node installed before proceeding.
 
 
 # Installing
@@ -62,15 +63,19 @@ Install initial data
 Run server
 
     python manage.py runserver -a -d
+    
+Now, open 127.0.0.1:5000 in your browser.
 
 # Build
 
 Generate static files
 
     python manage.py build
+    
+A folder called build has now been created in mis
 
 # Deploy
 
-Deploy static files, make sure you run build first and you have all correct AWS settings in config.py
+Upload the files you just generated to aws.
 
     python manage.py deploy
