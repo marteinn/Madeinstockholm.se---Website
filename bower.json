@@ -1,0 +1,16 @@
+{
+  "name": "mis-website",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+
+  "dependencies": {
+  	"jquery" : "2.0.0",
+  	"modernizr" : "2.6.2",
+  	"preboot" : "6c75b81c37f3d0809a0baff4ad0907edcfd93493",
+  	"retina.js-js" : "1.0.2"
+  }
+}

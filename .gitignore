@@ -1,0 +1,19 @@
+# osx
+.DS_Store
+
+# Python
+*.pyc
+*.db
+
+# Virtualenv
+.Python
+bin
+lib
+include
+/doc/
+/node_modules/
+/components/
+/mis/config.py
+/mis/build/
+/mis/uploads/
+/.idea/

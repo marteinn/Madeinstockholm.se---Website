@@ -1,0 +1,284 @@
+@content-font-size: 0.9em;
+
+
+body {
+  background-color: @background-color;
+  color: @primary-color;
+}
+
+#container {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+// 66.67
+
+header {
+	.clearfix();
+
+	h1 {
+		width: 108px;
+		height: 110px;
+		display: block;
+		margin: 0;
+
+		.retina-image("../img/mis-logo.png", 
+			"../img/mis-logo@2x.png", 108px, 110px);
+
+		span {
+			display: none;
+		}
+	}
+
+	nav.contact {
+		ul {
+			margin: 0;
+			li {
+				a {
+					font-family: @content-font;
+					font-size: @content-font-size;
+					text-decoration: none;
+					// 24px
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+.content {
+	.post {
+		padding-top: 25px;
+		padding-bottom: 25px;
+		margin-left: 10%;
+		margin-right: 10%;
+
+		h2 {
+			text-align: center;
+			font-family: @title-font;
+			font-weight: normal;
+			font-size: 2em;
+			line-height: 1em;
+			margin: 0;
+			// 88px
+		}
+
+		p {
+			margin-bottom: 0;
+			font-family: @content-font;
+			font-size: @content-font-size;
+		}
+	}
+
+	> .post:nth-child(2) {
+		border-bottom: 1px solid @primary-color;
+	}
+}
+
+.projects {
+
+	h5 {
+		margin: 0;
+		margin-bottom: 25px;
+		text-align: center;
+		font-family: @content-font;
+		font-size: @content-font-size;
+		text-transform: uppercase;
+		font-weight: normal;
+	}
+
+	article {
+
+		p {
+			margin-bottom: 0;
+		}
+
+		nav.links {
+			margin-top: 50px;
+		}
+
+		&.vinylwall {
+			#gradient .horizontal(#43BFAD, #007BD7);
+
+			color: #FFF;
+
+			h3 {
+				margin: 0;
+				width: 73px;
+				height: 40px;
+
+				.retina-image("../img/vw-logo.png",
+					"../img/vw-logo@2x.png", 73px, 40px);
+
+				span {
+					display: none;
+				}
+			}
+
+			h4 {
+				margin: 0;
+				display: block;
+				font-family: @title-font;
+				font-size: 2em;
+				font-weight: normal;
+				line-height: 1em;
+			}
+
+			p {
+				font-family: @content-font;
+
+				a {
+					color: #FFF;
+				}
+			}
+
+			nav.links {
+				ul {
+
+					margin: 0;
+					padding: 0;
+					width: (160px*2)+10;
+					margin-left: auto;
+					margin-right: auto;
+
+					.clearfix();
+
+					li {
+						display: block;
+
+				        a
+				        {
+				            width: 160px;
+				            height: 54px;
+				            display: block;
+				            background-repeat: no-repeat;
+
+				            span 
+				            {
+				                display: none;
+				            }
+
+				            &.vw-ios 
+				            {
+				            	float: left;
+				                .retina-image("../img/store-button-ios.png",
+									"../img/store-button-ios@2x.png", 160px, 54px);
+				            }
+
+				            &.vw-android 
+				            {
+				            	float: right;
+				                .retina-image("../img/store-button-android.png",
+									"../img/store-button-android@2x.png", 160px, 54px);
+				            }
+				        }
+					}
+				}
+			}
+		}
+	}
+}
+
+footer {
+	@margin: 25px;
+
+
+    text-align: center;
+    margin-top: @margin*4;
+    padding-bottom: 25px;
+	margin-left: 10%;
+	margin-right: 10%;
+
+    strong
+    {
+        color: @primary-color;
+        font-family: @content-font;
+        font-weight: normal;
+    }
+
+    h3
+    {
+        width: 88px;
+        height: 89px;
+
+        background-repeat: no-repeat;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: @margin*2;
+
+		.retina-image("../img/mis-logo.png",
+			"../img/mis-logo@2x.png", 88px, 89px);
+
+        span
+        {
+            display: none;
+        }
+    }
+
+    .persons {
+        color: @dark-color;
+        overflow: auto;
+        padding-top: 25px;
+        padding-bottom: @margin*2;
+        border-bottom: 1px solid @dark-color;
+
+        .wrapper 
+        {
+            max-width: 360px;    
+            margin-left: auto;
+            margin-right: auto;
+
+
+        }
+
+
+
+        .person {
+            margin-left: 1%;
+            margin-right: 1%;
+            width: 48%;
+            float: right;
+            font-size: 0.75em;
+            font-family: @content-font;
+
+
+            &:first-child 
+            {
+                float: left;
+            }
+
+            img
+            {
+                margin-bottom: 20px;
+            }
+
+            h4
+            {
+                font-weight: normal;
+            }
+
+            h4,
+            p
+            {
+                margin: 0;
+            }
+
+            a
+            {
+                color: @dark-color;
+                text-decoration: none;
+
+                &:hover
+                {
+                	text-decoration: underline;
+                }
+            }
+        }
+    }
+}
