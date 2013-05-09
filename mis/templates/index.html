@@ -65,7 +65,10 @@
             <div class="wrapper">
             {% for person in persons %}
                 <div class="person">
-                    <img src="{{ url_for('uploaded_file', filename=person.image) }}" />
+                    {% if person.image %}
+                        <img src="{{ url_for('uploaded_file', filename=person.image) }}" />
+                    {% endif %}
+
                     <h4>{{ person.name }}</h4>
                     <p>{{ person.content|safe }}</p>
                 </div>
