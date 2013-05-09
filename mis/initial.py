@@ -63,13 +63,13 @@ def setup_initial():
 
     person = models.Person()
     person.name = u"Martin Sandström"
-    person.image = "avatar-1.png"
+    person.image = "uploads/avatar-1.png"
     person.content = u'Developer<br /><a href="http://twitter.com/marteinn_se">@marteinn_se</a>'
     db.session.add(person)
 
     person = models.Person()
     person.name = u"Mattias Broden"
-    person.image = "avatar-2.png"
+    person.image = "uploads/avatar-2.png"
     person.content = u'Designer<br /><a href="http://twitter.com/EntireStudio">@EntireStudio</a>'
     db.session.add(person)
 
