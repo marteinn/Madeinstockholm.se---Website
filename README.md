@@ -1,7 +1,7 @@
 Madeinstockholm.se - Website
 ============================
 
-MadeInStockholm.se website, written in Python and Flask. We decided to open this project as an example on how you can utilize flask+flask-admin as a static site generator and showcase a S3 deploy workflow.
+MadeInStockholm.se website, written in Python and Flask. We decided to open this project as an example on how you can utilize flask+flask-admin as a static site generator and to showcase a S3 deploy workflow.
 
 # Requirement
 You need to have Python, pip, virtualenv and node installed before proceeding.
