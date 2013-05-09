@@ -13,3 +13,5 @@ include
 /doc/
 /node_modules/
 /components/
+/mis/config.py
+/mis/build/
