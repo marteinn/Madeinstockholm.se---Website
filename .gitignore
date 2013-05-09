@@ -16,3 +16,4 @@ include
 /mis/config.py
 /mis/build/
 /mis/uploads/
+/.idea/
