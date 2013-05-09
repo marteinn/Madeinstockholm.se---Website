@@ -1,9 +1,6 @@
 {
   "name": "mis-website",
   "version": "1.0.0",
-  "devDependencies": {
-  	"retina.js-js": "*"
-  },
 
   "exportsOverride": {
   	"retina.js-js": {
