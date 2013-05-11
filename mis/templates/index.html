@@ -13,6 +13,7 @@
     </header>
 
     <div class="content">
+        <section class="posts">
         {% for post in posts %}
             <article class="post {{ post.slug }}">
                 <h2>{{ post.title }}</h2>
@@ -22,42 +23,57 @@
                 {% endif %}
             </article>
         {% endfor %}
+        </section>
 
         {% if projects %}
         <section class="projects">
-            <h5>Our portfolio</h5>
+            <h5>Projects</h5>
 
             {% for project in projects %}
             <article class="project {{ project.slug }}">
-                <h3><span>{{ project.name }}</span></h3>
-                <h4><span>{{ project.title }}</span></h4>
-
                 <div class="wrapper">
-                    <div class="image">
-                        <img src="{{ url_for('uploaded_file', filename=project.image) }}" />
+                    <h3><span>{{ project.name }}</span></h3>
+
+                    <div class="content">
+                        <div class="image">
+                            <img src="{{ url_for('uploaded_file', filename=project.image) }}" />
+                        </div>
+
+                        <h4><span>{{ project.title }}</span></h4>
+                        <p>{{ project.content|safe }}</p>
                     </div>
 
-                    <p>{{ project.content|safe }}</p>
+                    {% if project.projectlinks %}
+                        <nav class="links">
+                            <ul>
+                            {% for link in project.projectlinks %}
+                                <li>
+                                    <a href="{{ link.link }}" class="{{ link.slug }}">
+                                        <span>{{ link.title }}</span>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </nav>
+                    {% endif %}
                 </div>
-
-                {% if project.projectlinks %}
-                    <nav class="links">
-                        <ul>
-                        {% for link in project.projectlinks %}
-                            <li>
-                                <a href="{{ link.link }}" class="{{ link.slug }}">
-                                    <span>{{ link.title }}</span>
-                                </a>
-                            </li>
-                        {% endfor %}
-                        </ul>
-                    </nav>
-                {% endif %}
 
             </article>
             {% endfor %}
         </section>
         {% endif %}
+
+        <section class="links">
+            <ul>
+                <li class="fork">
+                    <a href="https://github.com/marteinn/Madeinstockholm.se---Website">
+                        <img src="{{ url_for('static', filename='img/fork.png') }}" />
+                        fork us on github.com
+                    </a>
+                </li>
+            </ul>
+
+        </section>
     </div>
 
     <footer>
