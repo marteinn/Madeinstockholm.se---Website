@@ -113,13 +113,56 @@ header {
 			margin-top: 50px;
 		}
 
+        h3 {
+          margin: 0;
+        }
+
+        h4 {
+          margin: 0;
+          display: block;
+          font-family: @title-font;
+          font-size: 1.5em;
+          font-weight: normal;
+          line-height: 1em;
+        }
+
+        p {
+          font-family: @content-font;
+        }
+
+        // russiandance
+        &.russiandance {
+          background-color: #FFF;
+
+          color: #000;
+
+          h3 {
+            width: 95px;
+            height: 95px;
+
+            .retina-image("../img/russian-logo.png",
+                "../img/russian-logo@2x.png", 95px, 95px);
+
+            span {
+              display: none;
+            }
+          }
+
+          p {
+            a {
+              color: #000;
+            }
+          }
+
+        }
+
+        // vinylwall
 		&.vinylwall {
 			#gradient .horizontal(#43BFAD, #007BD7);
 
 			color: #FFF;
 
 			h3 {
-				margin: 0;
 				width: 73px;
 				height: 40px;
 
@@ -131,18 +174,7 @@ header {
 				}
 			}
 
-			h4 {
-				margin: 0;
-				display: block;
-				font-family: @title-font;
-				font-size: 1.5em;
-				font-weight: normal;
-				line-height: 1em;
-			}
-
 			p {
-				font-family: @content-font;
-
 				a {
 					color: #FFF;
 				}
@@ -218,12 +250,17 @@ section.links {
       text-decoration: none;
       font-size: 0.75em;
 
+      &:hover {
+        text-decoration: underline;
+      }
+
     }
 
     img {
       display: block;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 10px;
     }
   }
 }
