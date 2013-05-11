@@ -1,4 +1,5 @@
 @content-font-size: 0.9em;
+@margin: 25px;
 
 
 body {
@@ -7,7 +8,6 @@ body {
 }
 
 #container {
-	max-width: 960px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -51,18 +51,19 @@ header {
 	}
 }
 
-.content {
+#container > .content {
 	.post {
 		padding-top: 25px;
 		padding-bottom: 25px;
 		margin-left: 10%;
 		margin-right: 10%;
+        border-bottom: 1px solid @primary-color;
 
 		h2 {
 			text-align: center;
 			font-family: @title-font;
 			font-weight: normal;
-			font-size: 2em;
+			font-size: 1.5em;
 			line-height: 1em;
 			margin: 0;
 			// 88px
@@ -75,21 +76,31 @@ header {
 		}
 	}
 
-	> .post:nth-child(2) {
-		border-bottom: 1px solid @primary-color;
-	}
+    /*
+    .post:first-child {
+      h2 {
+        font-size: em;
+      }
+    }
+    */
+
+    .post + .post {
+        // border-top: 1px solid @primary-color;
+    }
 }
 
 .projects {
 
 	h5 {
 		margin: 0;
+        margin-top: 25px;
 		margin-bottom: 25px;
 		text-align: center;
-		font-family: @content-font;
-		font-size: @content-font-size;
-		text-transform: uppercase;
+        font-family: @title-font;
 		font-weight: normal;
+        font-size: 1.5em;
+        line-height: 1em;
+
 	}
 
 	article {
@@ -124,7 +135,7 @@ header {
 				margin: 0;
 				display: block;
 				font-family: @title-font;
-				font-size: 2em;
+				font-size: 1.5em;
 				font-weight: normal;
 				line-height: 1em;
 			}
@@ -184,15 +195,49 @@ header {
 	}
 }
 
-footer {
-	@margin: 25px;
 
+section.links {
 
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+
+      margin: 0;
+    }
+  }
+
+  .fork {
     text-align: center;
     margin-top: @margin*4;
+
+    a {
+      color: #000;
+      text-decoration: none;
+      font-size: 0.75em;
+
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+footer {
+
+
+
+    background-color: @primary-color;
+    text-align: center;
+    margin-top: @margin*2;
     padding-bottom: 25px;
-	margin-left: 10%;
-	margin-right: 10%;
+	//margin-left: 10%;
+	//margin-right: 10%;
 
     strong
     {
@@ -225,8 +270,7 @@ footer {
         color: @dark-color;
         overflow: auto;
         padding-top: 25px;
-        padding-bottom: @margin*2;
-        border-bottom: 1px solid @dark-color;
+        padding-bottom: @margin;
 
         .wrapper 
         {
@@ -246,6 +290,7 @@ footer {
             float: right;
             font-size: 0.75em;
             font-family: @content-font;
+            color: #FFF;
 
 
             &:first-child 
@@ -271,7 +316,7 @@ footer {
 
             a
             {
-                color: @dark-color;
+                color: #FFF;
                 text-decoration: none;
 
                 &:hover

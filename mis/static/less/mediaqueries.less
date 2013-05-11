@@ -44,10 +44,11 @@
 
 	.projects article {
 		&.vinylwall {
-			#gradient .horizontal(#43BFAD, #007BD7);
 			width: 100%;
 			padding-top: 25px;
 			padding-bottom: 25px;
+
+            #gradient .horizontal(#43BFAD, #007BD7);
 
 			h3 {
 				margin-left: auto;
@@ -111,7 +112,13 @@
 		// background-color: #FF0000;
 	}
 
+    @max-width: 960px;
+
 	header {
+        max-width: @max-width;
+        margin-left: auto;
+        margin-right: auto;
+
 		h1 {
 			position: static;
 			width: 108px;
@@ -132,35 +139,54 @@
 		}
 	}
 
-	.content {
-		margin-top: 25px;
+    #container > .content {
+		margin-top: 25px*4;
 
 		.post {
+            padding-bottom: 25px*4;
+
 			h2 {
-				font-size: 3em;	
+                max-width: 720px;
+                // outline: 1px solid #FF0000;
+                font-size: 2em;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 25px;
+                padding-right: 25px;
+                line-height: 1.5em;
 			}
 		}
 	}
 
+
+    #container > .content article.post {
+      max-width: @max-width;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .projects h5 {
+      margin-top: 25px*2;
+      margin-bottom: 25px*2;
+      font-size: 2em;
+    }
+
 	.projects article {
 		&.vinylwall {
+            .wrapper {
+              padding-bottom: 25px;
+              max-width: @max-width;
+              margin-left: auto;
+              margin-right: auto;
+            }
 			
 
 			h3 {
-				margin-left: 50px;
+				margin-left: 25px;
 				position: absolute;
 			}
 
-			h4 {
-				// outline: 1px solid #FF0000;
-				font-size: 3em;
-				text-align: left;
-				margin: 0;
-				margin-left: (50px*2)+73px;
-				margin-right: 50px*2;
-			}
-
-			.wrapper {
+			.content {
 				.clearfix();
 
 				margin-top: 25px;
@@ -175,26 +201,23 @@
 				width: 69%;
 			}
 
+            h4,
 			p {
 				float: right;
 				margin: 0;
 				width: 30%;
 			}
+
+
+            h4 {
+                // outline: 1px solid #FF0000;
+                font-size: 2em;
+                text-align: left;
+                margin: 0;
+                margin-bottom: 25px;
+                //margin-left: (50px*2)+73px;
+                //margin-right: 50px*2;
+            }
 		}
-	}
-}
-
-@media only screen and (min-width: 768px) and (max-width: 877px) 
-{
-	body.splash header > .wrapper 
-	{
-	}
-}
-
-// MOBILE
-@media only screen and (max-width: 767px) 
-{
-	body.splash
-	{	
 	}
 }
