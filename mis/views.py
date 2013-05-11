@@ -13,7 +13,7 @@ def index():
     site = sites[0]
 
     posts = Post.query.order_by(asc(Post.order)).filter(Post.published==True)
-    projects = Project.query.order_by(asc(Project.order)).filter(Post.published==True)
+    projects = Project.query.order_by(asc(Project.order)).filter(Project.published==True)
     persons = Person.query.order_by(func.random()).all()
 
     return render_template("index.html",
