@@ -54,17 +54,17 @@ Copy and rename uploads.example folder
 
     cp -r ./mis/uploads.example ./mis/uploads
 
-Install initial data
+Install initial data, createdb accepts one param, -initial (with example initial data)
 
     python manage.py createdb -i
 
 # Run
 
-Run server
+Run server, runserver accept three params, -a (admin) -d (debug) -t (debug-toolbar)
 
     python manage.py runserver -a -d
     
-Now, open 127.0.0.1:5000 in your browser.
+Now, open 127.0.0.1:5000 in your browser. You can access the admin at 127.0.0.1:5000/admin
 
 # Build
 
