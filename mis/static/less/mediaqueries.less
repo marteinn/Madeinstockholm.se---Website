@@ -43,40 +43,40 @@
 	}
 
 	.projects article {
+        width: 100%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        h3 {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        h4 {
+          margin-top: 25px;
+          text-align: center;
+          margin-left: 25px;
+          margin-right: 25px;
+        }
+
+        .image {
+          margin-top: 25px;
+          text-align: center;
+          margin-right: 25px;
+          margin-left: 25px;
+
+          img {
+            max-width: 100%;
+          }
+        }
+
+
+        p {
+          margin-left: 25px;
+          margin-right: 25px;
+        }
+
 		&.vinylwall {
-			width: 100%;
-			padding-top: 25px;
-			padding-bottom: 25px;
-
-            #gradient .horizontal(#43BFAD, #007BD7);
-
-			h3 {
-				margin-left: auto;
-				margin-right: auto;
-			}
-
-			h4 {
-				margin-top: 25px;
-				text-align: center;
-				margin-left: 25px;
-				margin-right: 25px;
-			}
-
-			.image {
-				margin-top: 25px;
-				text-align: center;
-				margin-right: 25px;
-				margin-left: 25px;
-
-				img {
-					max-width: 100%;
-				}
-			}
-
-			p {
-				margin-left: 25px;
-				margin-right: 25px;
-			}
 
 			nav.links ul {
 				width: 160px;
@@ -172,27 +172,57 @@
     }
 
 	.projects article {
+
+        .wrapper {
+          padding-bottom: 25px;
+          max-width: @max-width;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        h3 {
+          margin-left: 25px;
+          position: absolute;
+        }
+
+        .content {
+          .clearfix();
+
+          margin-top: 25px;
+          margin-right: 50px*2;
+        }
+
+        .image {
+          margin: 0;
+          float: left;
+          width: 69%;
+        }
+
+        h4,
+        p {
+          float: right;
+          margin: 0;
+          width: 30%;
+        }
+
+        h4 {
+          font-size: 2em;
+          text-align: left;
+          margin: 0;
+          margin-bottom: 25px;
+        }
+
+        // russiandance {
+        &.russiandance {
+          .content {
+            margin-left: (50px*2)+73px;
+          }
+        }
+
+        // vinylwall
 		&.vinylwall {
-            .wrapper {
-              padding-bottom: 25px;
-              max-width: @max-width;
-              margin-left: auto;
-              margin-right: auto;
-            }
-			
-
-			h3 {
-				margin-left: 25px;
-				position: absolute;
-			}
-
 			.content {
-				.clearfix();
-
-				margin-top: 25px;
 				margin-left: (50px*2)+73px;
-				margin-right: 50px*2;
-				// outline: 1px solid #FF0000;
 			}
 
 			.image {
@@ -204,20 +234,9 @@
             h4,
 			p {
 				float: right;
-				margin: 0;
+				margin-left: 0;
 				width: 30%;
 			}
-
-
-            h4 {
-                // outline: 1px solid #FF0000;
-                font-size: 2em;
-                text-align: left;
-                margin: 0;
-                margin-bottom: 25px;
-                //margin-left: (50px*2)+73px;
-                //margin-right: 50px*2;
-            }
 		}
 	}
 }
