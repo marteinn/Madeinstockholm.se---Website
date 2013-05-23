@@ -33,7 +33,7 @@ header nav.contact ul{margin:0;}header nav.contact ul li a{font-family:'Akkurat-
 section.links ul{list-style-type:none;margin:0;padding:0;}section.links ul li{margin:0;}
 section.links .fork{text-align:center;margin-top:100px;}section.links .fork a{color:#000;text-decoration:none;font-size:0.75em;}section.links .fork a:hover{text-decoration:underline;}
 section.links .fork img{display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;}
-footer{background-color:#0000ff;text-align:center;margin-top:50px;padding-bottom:25px;}footer strong{color:#0000ff;font-family:'Akkurat-Light';font-weight:normal;}
+footer{background-color:#0000ff;text-align:center;margin-top:50px;padding-top:25px;padding-bottom:25px;}footer strong{color:#0000ff;font-family:'Akkurat-Light';font-weight:normal;}
 footer h3{width:88px;height:89px;background-repeat:no-repeat;margin:0;margin-left:auto;margin-right:auto;margin-bottom:50px;background-image:url("../img/mis-logo.png");}@media only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min--moz-device-pixel-ratio:2),only screen and (-o-min-device-pixel-ratio:2/1),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx){footer h3{background-image:url("../img/mis-logo@2x.png");background-size:88px 89px;}}footer h3 span{display:none;}
 footer .persons{color:#1a1a1a;overflow:auto;padding-top:25px;padding-bottom:25px;}footer .persons .wrapper{max-width:360px;margin-left:auto;margin-right:auto;}
 footer .persons .person{margin-left:1%;margin-right:1%;width:48%;float:right;font-size:0.75em;font-family:'Akkurat-Light';color:#FFF;}footer .persons .person:first-child{float:left;}
