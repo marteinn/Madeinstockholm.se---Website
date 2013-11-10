@@ -17,3 +17,6 @@ include
 /mis/build/
 /mis/uploads/
 /.idea/
+
+# Project
+/mis/static/css/fonts/
