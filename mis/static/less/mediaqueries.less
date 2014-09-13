@@ -41,7 +41,7 @@
 		}
 	}
 
-	.projects article {
+	.project {
         width: 100%;
         padding-top: 25px;
         padding-bottom: 25px;
@@ -74,31 +74,29 @@
             margin-left: 25px;
             margin-right: 25px;
         }
-
-		&.vinylwall {
-
-			nav.links ul {
-				width: 160px;
-
-				.vw-ios {
-					margin-top: 10px;
-				}
-			}
-		}
 	}
+
+    .project-vinylwall {
+
+        nav.links ul {
+            width: 160px;
+
+            .vw-ios {
+                margin-top: 10px;
+            }
+        }
+    }
 }
 
 // Make link buttons show on same line
 @media only screen and (min-width: 360px) {
-	.projects article {
-		&.vinylwall {
-			nav.links {
-				ul {
-					width: (160px*2)+10;
+	.project-vinylwall {
+		nav.links {
+			ul {
+				width: (160px*2)+10;
 
-					.vw-ios {
-						margin-top: 0px;
-					}
+				.vw-ios {
+					margin-top: 0px;
 				}
 			}
 		}
@@ -170,7 +168,7 @@
         font-size: 2em;
     }
 
-	.projects article {
+	.project {
 
         .wrapper {
             padding-bottom: 25px;
@@ -211,31 +209,32 @@
             margin-bottom: 25px;
         }
 
-        // russiandance {
-        &.russiandance {
-            .content {
-                margin-left: (50px*2)+73px;
-            }
+	}
+
+    // russiandance {
+    .project-russiandance {
+        .content {
+            margin-left: (50px*2)+73px;
+        }
+    }
+
+    // vinylwall
+    .project-vinylwall {
+        .content {
+            margin-left: (50px*2)+73px;
         }
 
-        // vinylwall
-		&.vinylwall {
-			.content {
-				margin-left: (50px*2)+73px;
-			}
+        .image {
+            margin: 0;
+            float: left;
+            width: 69%;
+        }
 
-			.image {
-				margin: 0;
-				float: left;
-				width: 69%;
-			}
-
-            h4,
-			p {
-				float: right;
-				margin-left: 0;
-				width: 30%;
-			}
-		}
-	}
+        h4,
+        p {
+            float: right;
+            margin-left: 0;
+            width: 30%;
+        }
+    }
 }

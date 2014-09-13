@@ -1,0 +1,41 @@
+header {
+    .clearfix();
+
+    h1 {
+        width: 108px;
+        height: 110px;
+        display: block;
+        margin: 0;
+
+        .retina-image("../img/mis-logo.png",
+            "../img/mis-logo@2x.png", 108px, 110px);
+
+        span {
+            display: none;
+        }
+    }
+
+    nav.contact {
+        ul {
+            .clearfix();
+
+            margin: 0;
+
+            li {
+                float: right;
+                margin-left: 20px;
+
+                a {
+                    font-family: @content-font;
+                    font-size: @content-font-size;
+                    text-decoration: none;
+                    // 24px
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
