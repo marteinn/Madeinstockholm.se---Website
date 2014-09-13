@@ -56,7 +56,7 @@ module.exports = function(grunt) {
             },
             site: {
                 files: {
-                    "tmp": ["mis/static/css/main.css"]
+                    "mis/static/css/": ["mis/static/css/main.css"]
                 }
             }
         }
