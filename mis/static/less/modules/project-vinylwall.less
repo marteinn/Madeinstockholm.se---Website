@@ -1,0 +1,108 @@
+.project-vinylwall {
+    // #gradient .horizontal(#43BFAD, #007BD7);
+    background-color: @vw-background-color;
+
+    h3 {
+        width: 73px;
+        height: 40px;
+
+        background-image: url(../img/vw-logo.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    h3 span {
+        display: none;
+    }
+
+    a {
+        color: @primary-color;
+    }
+
+    .links ul {
+        padding: 0;
+        width: (160px*2)+10;
+
+        .l-center();
+        .clearfix();
+
+        li {
+            display: block;
+
+            a {
+                width: 160px;
+                height: 54px;
+                display: block;
+                background-repeat: no-repeat;
+
+                span {
+                    display: none;
+                }
+
+                &.vw-ios {
+                    float: left;
+                    .retina-image("../img/store-button-ios.png",
+                        "../img/store-button-ios@2x.png",
+                        160px, 54px);
+                }
+
+                &.vw-android {
+                    float: right;
+                    .retina-image("../img/store-button-android.png",
+                        "../img/store-button-android@2x.png",
+                        160px, 54px);
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 320px) {
+    .project-vinylwall {
+        .links ul {
+            width: 160px;
+
+            .vw-ios {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 360px) {
+    .project-vinylwall {
+        .links {
+            ul {
+                width: (160px*2)+10;
+
+                .vw-ios {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    // vinylwall
+    .project-vinylwall {
+        .content {
+            margin-left: (50px*2)+73px;
+        }
+
+        .image {
+            margin: 0;
+            float: left;
+            width: 69%;
+        }
+
+        h4,
+        p {
+            float: right;
+            margin-left: 0;
+            width: 30%;
+        }
+    }
+}
