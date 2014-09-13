@@ -3,7 +3,7 @@
 {% block title %}Made In Stockholm{% endblock %}
 
 {% block content %}
-    <header>
+    <header class="header">
         <h1><span>{{ site.title }}</span></h1>
         <nav class="contact">
             <ul>
@@ -13,10 +13,10 @@
         </nav>
     </header>
 
-    <div class="content">
+    <div class="main-wrapper">
         <section class="posts">
         {% for post in posts %}
-            <article class="post {{ post.slug }}">
+            <article class="post post-{{ post.slug }}">
                 <h2>{{ post.title }}</h2>
 
                 {% if post.content %}
@@ -46,7 +46,7 @@
 
                     {% if project.projectlinks %}
                         <nav class="links">
-                            <ul>
+                            <ul class="l-plain-list">
                             {% for link in project.projectlinks %}
                                 <li>
                                     <a href="{{ link.link }}" class="{{ link.slug }}">
@@ -65,7 +65,7 @@
         {% endif %}
 
         <section class="links">
-            <ul>
+            <ul class="l-plain-list">
                 <li class="fork">
                     <a href="https://github.com/marteinn/Madeinstockholm.se---Website">
                         <img src="{{ url_for('static', filename='img/fork.png') }}" />
@@ -77,7 +77,7 @@
         </section>
     </div>
 
-    <footer>
+    <footer class="footer">
         <div class="persons">
             <div class="wrapper">
             {% for person in persons %}
