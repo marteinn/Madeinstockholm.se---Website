@@ -1,4 +1,7 @@
 .project {
+    padding-top: @margin*2;
+    padding-bottom: @margin*2;
+
     p {
         margin-bottom: 0;
     }
@@ -26,14 +29,12 @@
 }
 
 .project:last-child {
-    padding-bottom: @margin*2;
+    padding-bottom: @margin*4;
 }
 
 @media only screen and (min-width: 320px) {
     .project {
         width: 100%;
-        padding-top: 25px;
-        padding-bottom: 25px;
 
         h3 {
             margin-left: auto;
@@ -69,7 +70,6 @@
 @media only screen and (min-width: 700px) {
     .project {
         .wrapper {
-            padding-bottom: 25px;
             max-width: @max-width;
             margin-left: auto;
             margin-right: auto;
@@ -83,7 +83,6 @@
         .content {
             .clearfix();
 
-            margin-top: 25px;
             margin-right: 50px*2;
         }
 
