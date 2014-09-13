@@ -202,6 +202,7 @@ body {
 	text-align: center;
 	padding-top: 25px;
 	padding-bottom: 25px;
+	position: relative;
 }
 
 .footer strong {
@@ -560,6 +561,21 @@ body {
 
 .header .contact {
 	margin-top: 50px;
+}
+
+.links {
+	margin: 0;
+}
+
+.links .fork {
+	margin-right: 50px;
+	bottom: 50px;
+	position: absolute;
+	right: 0;
+}
+
+.links .fork a {
+	font-size: 1em;
 }
 
 .post {
