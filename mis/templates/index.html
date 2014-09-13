@@ -63,18 +63,6 @@
             {% endfor %}
         </section>
         {% endif %}
-
-        <section class="links">
-            <ul class="l-plain-list">
-                <li class="fork">
-                    <a href="https://github.com/marteinn/Madeinstockholm.se---Website">
-                        <img src="{{ url_for('static', filename='img/fork.png') }}" />
-                        Fork us on GitHub
-                    </a>
-                </li>
-            </ul>
-
-        </section>
     </div>
 
     <footer class="footer">
@@ -90,7 +78,19 @@
                     <p>{{ person.content|safe }}</p>
                 </div>
             {% endfor %}
-            <div>
+            </div>
         </div>
+
+        <div class="links">
+            <ul class="l-plain-list">
+                <li class="fork">
+                    <a href="https://github.com/marteinn/Madeinstockholm.se---Website">
+                        <img src="{{ url_for('static', filename='img/fork.svg') }}" />
+                        Fork us on GitHub
+                    </a>
+                </li>
+            </ul>
+        </div>
+
     </footer>
 {% endblock %}

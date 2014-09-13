@@ -200,7 +200,6 @@ body {
 	color: #fbd2d0;
 	background-color: #13212f;
 	text-align: center;
-	margin-top: 50px;
 	padding-top: 25px;
 	padding-bottom: 25px;
 }
@@ -260,13 +259,17 @@ body {
 	text-decoration: underline;
 }
 
+.links {
+	margin-top: 25px;
+}
+
 .links .fork {
 	text-align: center;
-	margin-top: 100px;
+	font-family: 'HelveticaNeue-Light';
+	font-weight: normal;
 }
 
 .links .fork a {
-	color: #000;
 	text-decoration: none;
 	font-size: 0.75em;
 }
@@ -339,6 +342,10 @@ body {
 
 .project p {
 	font-family: 'Akkurat-Light';
+}
+
+.project:last-child {
+	padding-bottom: 50px;
 }
 
 .project-vinylwall {
