@@ -356,29 +356,19 @@ body {
 }
 
 .project-vinylwall {
-	color: #FFF;
-	background-color: #007bd7;
-	background-image: -moz-linear-gradient(left, #43bfad, #007bd7);
-	background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#43bfad), to(#007bd7));
-	background-image: -webkit-linear-gradient(left, #43bfad, #007bd7);
-	background-image: -o-linear-gradient(left, #43bfad, #007bd7);
-	background-image: linear-gradient(to right, #43bfad, #007bd7);
-	background-repeat: repeat-x;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff43bfad', endColorstr='#ff007bd7', GradientType=1);
+	background-color: #99ffff;
 }
 
 .project-vinylwall h3 {
 	width: 73px;
 	height: 40px;
-	background-image: url("../img/vw-logo.png");
+	background-image: url(../img/vw-logo.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .project-vinylwall h3 span {
 	display: none;
-}
-
-.project-vinylwall p a {
-	color: #FFF;
 }
 
 .project-vinylwall .links ul {
@@ -447,11 +437,6 @@ body {
 .footer h3 {
 	background-image: url("../img/mis-logo@2x.png");
 	background-size: 88px 89px;
-}
-
-.project-vinylwall h3 {
-	background-image: url("../img/vw-logo@2x.png");
-	background-size: 73px 40px;
 }
 
 .project-vinylwall .links ul li a.vw-ios {

@@ -1,22 +1,18 @@
 .project-vinylwall {
-    color: #FFF;
-
-    #gradient .horizontal(#43BFAD, #007BD7);
+    // #gradient .horizontal(#43BFAD, #007BD7);
+    background-color: @vw-background-color;
 
     h3 {
         width: 73px;
         height: 40px;
 
-        .retina-image("../img/vw-logo.png",
-            "../img/vw-logo@2x.png", 73px, 40px);
+        background-image: url(../img/vw-logo.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     h3 span {
         display: none;
-    }
-
-    p a {
-        color: #FFF;
     }
 
     .links ul {
