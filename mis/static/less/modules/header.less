@@ -1,14 +1,19 @@
 .header {
     .clearfix();
 
+    a {
+        color: @primary-color;
+    }
+
     h1 {
         width: 108px;
         height: 110px;
         display: block;
         margin: 0;
 
-        .retina-image("../img/mis-logo.png",
-            "../img/mis-logo@2x.png", 108px, 110px);
+        background-image: url(../img/mis-logo.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
 
         span {
             display: none;
