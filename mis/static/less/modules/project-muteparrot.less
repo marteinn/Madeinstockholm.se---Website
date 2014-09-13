@@ -1,0 +1,29 @@
+.project-muteparrot {
+    background-color: @mp-background-color;
+    color: @mp-text-color;
+
+    h3 {
+        width: 95px;
+        height: 95px;
+
+        background-image: url(../img/muteparrot-logo.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        span {
+            display: none;
+        }
+    }
+
+    p a {
+        color: @mp-text-color;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .project-muteparrot {
+        .content {
+            margin-left: (50px*2)+73px;
+        }
+    }
+}
