@@ -1,5 +1,7 @@
 .footer {
-    background-color: @footer-background;
+    color: @footer-text-color;
+    background-color: @footer-background-color;
+
     text-align: center;
     margin-top: @margin*2;
     padding-top: 25px;
@@ -8,31 +10,15 @@
     //margin-right: 10%;
 
     strong {
-        color: @primary-color;
         font-family: @content-font;
         font-weight: normal;
     }
 
-    h3 {
-        width: 88px;
-        height: 89px;
-
-        background-repeat: no-repeat;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: @margin*2;
-
-        .retina-image("../img/mis-logo.png",
-            "../img/mis-logo@2x.png", 88px, 89px);
-
-        span {
-            display: none;
-        }
+    a {
+        color: @footer-text-color;
     }
 
     .persons {
-        color: @dark-color;
         overflow: auto;
         padding-top: 25px;
         padding-bottom: @margin;
@@ -50,7 +36,6 @@
             float: right;
             font-size: 0.75em;
             font-family: @content-font;
-            color: #FFF;
 
 
             &:first-child {
@@ -71,7 +56,6 @@
             }
 
             a {
-                color: #FFF;
                 text-decoration: none;
 
                 &:hover {
