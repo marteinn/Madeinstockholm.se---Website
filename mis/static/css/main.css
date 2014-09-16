@@ -354,10 +354,6 @@ a {
 	font-family: 'Akkurat-Light';
 }
 
-.project:last-child {
-	padding-bottom: 100px;
-}
-
 .project-vinylwall {
 	background-color: #99ffff;
 }
@@ -401,7 +397,7 @@ a {
 
 .project-vinylwall .links ul li a {
 	width: 160px;
-	height: 54px;
+	height: 52px;
 	display: block;
 	background-repeat: no-repeat;
 }
@@ -412,12 +408,15 @@ a {
 
 .project-vinylwall .links ul li a.vw-ios {
 	float: left;
-	background-image: url("../img/store-button-ios.png");
+	background-image: url(../img/store-button-ios.svg);
+	background-size: cover;
 }
 
 .project-vinylwall .links ul li a.vw-android {
 	float: right;
-	background-image: url("../img/store-button-android.png");
+	background-image: url(../img/store-button-android.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .project-russiandance {
@@ -459,20 +458,6 @@ a {
 
 .project-muteparrot p a {
 	color: #99ffff;
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min--moz-device-pixel-ratio:2),only screen and (-o-min-device-pixel-ratio:2/1),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx) {
-
-.project-vinylwall .links ul li a.vw-ios {
-	background-image: url("../img/store-button-ios@2x.png");
-	background-size: 160px 54px;
-}
-
-.project-vinylwall .links ul li a.vw-android {
-	background-image: url("../img/store-button-android@2x.png");
-	background-size: 160px 54px;
-}
-
 }
 
 @media only screen and (min-width:320px) {
@@ -646,6 +631,7 @@ a {
 
 .project .wrapper {
 	max-width: 960px;
+	min-height: 350px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -712,6 +698,21 @@ a {
 
 .project-muteparrot .content {
 	margin-left: 173px;
+}
+
+}
+
+@media only screen and (min-width:820px) {
+
+.project-vinylwall .links {
+	margin-left: 173px;
+	margin-right: 100px;
+	overflow: auto;
+}
+
+.project-vinylwall .links .holder {
+	float: left;
+	width: 69%;
 }
 
 }
