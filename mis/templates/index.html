@@ -46,15 +46,17 @@
 
                     {% if project.projectlinks %}
                         <nav class="links">
-                            <ul class="l-plain-list">
-                            {% for link in project.projectlinks %}
-                                <li>
-                                    <a href="{{ link.link }}" class="{{ link.slug }}">
-                                        <span>{{ link.title }}</span>
-                                    </a>
-                                </li>
-                            {% endfor %}
-                            </ul>
+                            <div class="holder">
+                                <ul class="l-plain-list">
+                                {% for link in project.projectlinks %}
+                                    <li>
+                                        <a href="{{ link.link }}" class="{{ link.slug }}">
+                                            <span>{{ link.title }}</span>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                                </ul>
+                            </div>
                         </nav>
                     {% endif %}
                 </div>

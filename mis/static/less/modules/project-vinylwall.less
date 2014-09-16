@@ -31,7 +31,7 @@
 
             a {
                 width: 160px;
-                height: 54px;
+                height: 52px;
                 display: block;
                 background-repeat: no-repeat;
 
@@ -41,16 +41,15 @@
 
                 &.vw-ios {
                     float: left;
-                    .retina-image("../img/store-button-ios.png",
-                        "../img/store-button-ios@2x.png",
-                        160px, 54px);
+                    background-image: url(../img/store-button-ios.svg);
+                    background-size: cover;
                 }
 
                 &.vw-android {
                     float: right;
-                    .retina-image("../img/store-button-android.png",
-                        "../img/store-button-android@2x.png",
-                        160px, 54px);
+                    background-image: url(../img/store-button-android.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
                 }
             }
         }
@@ -103,6 +102,22 @@
             float: right;
             margin-left: 0;
             width: 30%;
+        }
+    }
+}
+
+@media only screen and (min-width: 820px) {
+    // vinylwall
+    .project-vinylwall {
+        .links {
+            margin-left: (50px*2)+73px;
+            margin-right: 100px; // Inherited from .project
+            overflow: auto;
+        }
+
+        .links .holder {
+            float: left;
+            width: 69%;
         }
     }
 }
