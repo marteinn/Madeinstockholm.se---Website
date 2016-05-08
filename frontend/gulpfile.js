@@ -12,9 +12,7 @@ elixir(function(mix) {
     publicPath += publicPath.endsWith("/") ? "" : "/";
 
     mix.less("less/main.less")
-        .copy('fonts', publicPath+'css/fonts')
-        .copy("less/lib/normalize/normalize.css",
-            publicPath+"css/normalize.css");
+        .copy('fonts', publicPath+'css/fonts');
 
     mix.browserify("js/main.js", publicPath+"js/main.js");
     mix.copy('js/lib', publicPath+'js/lib');

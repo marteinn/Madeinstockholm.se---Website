@@ -1,11 +1,7 @@
 .header {
     .clearfix();
 
-    a {
-        color: @primary-color;
-    }
-
-    h1 {
+    &__title {
         width: 108px;
         height: 110px;
         display: block;
@@ -14,33 +10,31 @@
         background-image: url(../img/mis-logo.svg);
         background-repeat: no-repeat;
         background-size: cover;
-
-        span {
-            display: none;
-        }
     }
 
-    .contact {
-        ul {
-            .clearfix();
+    &__title-text {
+        display: none;
+    }
 
-            margin: 0;
+    &__menu-list {
+        .clearfix();
+        margin: 0;
+    }
 
-            li {
-                float: right;
-                margin-left: 20px;
+    &__menu-item {
+        float: right;
+        margin-left: 20px;
+    }
 
-                a {
-                    font-family: @content-font;
-                    font-size: @content-font-size;
-                    text-decoration: none;
-                    // 24px
+    &__menu-link {
+        color: @primary-color;
+        font-family: @content-font;
+        font-size: @content-font-size;
+        text-decoration: none;
+        // 24px
 
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
+        &:hover {
+            text-decoration: underline;
         }
     }
 }
@@ -50,20 +44,19 @@
     .header {
         height: (50px)+110px;
 
-        h1 {
+        &__title {
             margin-top: 60px;
             position: absolute;
             left: 50%;
             margin-left: -(108px/2);
         }
-    }
 
-    .header .contact {
-        float: right;
-        margin-right: 25px;
-        margin-top: 25px;
+        &__menu {
+            float: right;
+            margin-right: 25px;
+            margin-top: 25px;
+        }
     }
-
 }
 
 @media only screen and (min-width: 700px) {
@@ -72,7 +65,7 @@
         margin-left: auto;
         margin-right: auto;
 
-        h1 {
+        &__title {
             position: static;
             width: 108px;
             height: 110px;
@@ -81,14 +74,10 @@
             float: left;
             margin-top: 50px;
             margin-left: 25px;
-
-            span {
-                display: none;
-            }
         }
-    }
 
-    .header .contact {
-        margin-top: 50px;
+        &__menu {
+            margin-top: 50px;
+        }
     }
 }
