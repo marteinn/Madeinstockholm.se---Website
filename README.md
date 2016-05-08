@@ -16,12 +16,12 @@ This is the madeinstockholm.se website based on AtomicPress.
 
 1. Install frontend requirements
 
-	```
-	cd frontend
-	npm install
-	npm install gulp
-	gulp
-	```
+    ```
+    cd frontend
+    npm install
+    npm install gulp
+    gulp
+    ```
 
 1. Create database
 
