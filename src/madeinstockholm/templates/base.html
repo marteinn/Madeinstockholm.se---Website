@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ blog.title }}</title>
+        <meta name="description" content="{{ blog.tagline }}">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='madeinstockholm/css/main.css') }}">
+        <script src="{{ url_for('static', filename='madeinstockholm/js/lib/modernizr/modernizr.js') }}"></script>
+    </head>
+    <body class=" l-center">
+        <div id="container">
+            {% block header %}
+            {% endblock %}
+
+            <div class="main-wrapper">
+                {% block content %}
+                {% endblock %}
+            </div>
+
+            {% block footer %}
+            {% endblock %}
+        </div>
+
+        <script src="{{ url_for('static', filename='madeinstockholm/js/lib/retina.js-js/retina.js') }}"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-40725863-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src='//www.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+
+    </body>
+</html>

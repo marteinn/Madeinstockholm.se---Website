@@ -1,0 +1,83 @@
+.header {
+    .clearfix();
+
+    &__title {
+        width: 108px;
+        height: 110px;
+        display: block;
+        margin: 0;
+
+        background-image: url(../img/mis-logo.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__title-text {
+        display: none;
+    }
+
+    &__menu-list {
+        .clearfix();
+        margin: 0;
+    }
+
+    &__menu-item {
+        float: right;
+        margin-left: 20px;
+    }
+
+    &__menu-link {
+        color: @primary-color;
+        font-family: @content-font;
+        font-size: @content-font-size;
+        text-decoration: none;
+        // 24px
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 320px) {
+    .header {
+        height: (50px)+110px;
+
+        &__title {
+            margin-top: 60px;
+            position: absolute;
+            left: 50%;
+            margin-left: -(108px/2);
+        }
+
+        &__menu {
+            float: right;
+            margin-right: 25px;
+            margin-top: 25px;
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .header {
+        max-width: @max-width;
+        margin-left: auto;
+        margin-right: auto;
+
+        &__title {
+            position: static;
+            width: 108px;
+            height: 110px;
+            display: block;
+            margin: 0;
+            float: left;
+            margin-top: 50px;
+            margin-left: 25px;
+        }
+
+        &__menu {
+            margin-top: 50px;
+        }
+    }
+}

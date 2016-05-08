@@ -1,0 +1,55 @@
+.hero {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-bottom: 1px solid @primary-color;
+
+    &__title {
+        text-align: center;
+        font-family: @title-font;
+        font-weight: normal;
+        font-size: 1.5em;
+        line-height: 1em;
+        margin: 0;
+    }
+
+    &__description {
+        margin-bottom: 0;
+        font-family: @content-font;
+        font-size: @content-font-size;
+    }
+}
+
+
+@media only screen and (min-width: 320px) {
+    .hero {
+        padding-top: 40px;
+        padding-bottom: 30px;
+        margin-left: 10%;
+        margin-right: 10%;
+
+        &__description {
+            text-align: center;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 700px) {
+    .hero {
+        padding-bottom: 25px*4;
+        padding-top: 0;
+
+        &__title {
+            max-width: 720px;
+            font-size: 2em;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+            line-height: 1.5em;
+        }
+    }
+}
+

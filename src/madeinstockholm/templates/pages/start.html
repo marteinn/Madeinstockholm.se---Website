@@ -1,0 +1,59 @@
+{% extends "base.html"%}
+
+{% block header %}
+    {% include "partials/header.html" %}
+{% endblock %}
+
+{% block content %}
+    <section>
+        <article class="hero">
+            <h2 class="hero__title">{{ page.content }}</h2>
+        </article>
+    </section>
+
+    <section class="projects">
+        <h5 class="projects__title">Projects</h5>
+
+        {% for project in projects %}
+            <article class="project project-{{ project.name }}">
+                <div class="project__wrap">
+                    <h3 class="project__title"><span class="project__title-text">{{ project.title }}</span></h3>
+
+                    <div class="project__content">
+                        {% if project|has_post_images %}
+                        <div class="project__image">
+                            {% for image in project|post_images %}
+                                <img src="{{ url_for('uploaded_file', filename=image.guid) }}" />
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <h4 class="project__sub-title"><span>{{ project.excerpt }}</span></h4>
+                        <p class="project__description">{{ project.content|safe }}</p>
+                    </div>
+
+                    {% if project|has_nav_menu_items %}
+                        <nav class="project__links">
+                            <div class="project__links-wrap">
+                                <ul class="project__links-list">
+                                    {% for item in project|nav_menu_items %}
+                                        <li class="project__links-item">
+                                            <a href="{{ item.guide }}" class="project__links-link project__links-link--{{ item.name }}">
+                                                <span class="project__links-link-text">{{ item.title }}</span>
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </nav>
+                    {% endif %}
+                </div><!-- End wrapper -->
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}
+
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}

@@ -1,81 +1,78 @@
-Madeinstockholm.se - Website
-============================
+# MadeInStockholm.se
 
-MadeInStockholm.se website, written in Python and Flask. We decided to open this project as an example on how you can utilize flask+flask-admin as a static site generator and to showcase a S3 deploy workflow.
-
-# Requirement
-You need to have Python, pip, virtualenv and node installed before proceeding.
+This is the madeinstockholm.se website based on AtomicPress.
 
 
-# Installing
+## Requirements
 
-Clone repository
-
-    git clone git@github.com:marteinn/Madeinstockholm.se---Website.git
-
-Open
-
-    cd Madeinstockholm.se---Website
-
-Init virtualenv
-
-    virtualenv .
-
-Activate virtualenv
-
-    source bin/activate
-
-Install flask + related packages
-
-    pip install -r requirements.txt
+- Python 2.7
 
 
-Install grunt+bower
+## Getting started
 
+1. Install requirements
+
+    `pip install -r src/requirements/local.txt`
+
+1. Install frontend requirements
+
+    ```
+    cd frontend
     npm install
+    npm install gulp
+    gulp
+    ```
 
-Install bower packages
+1. Create database
 
-    bower install
+    `python mange.py create_db`
 
-Copy bower packages
+1. (Optional) Add sample data
 
-    grunt bower:install
+    `python manage.py prefill fill`
 
-Compile less and js files
+1. Start server
 
-    grunt
+    `python manage.py runserver`
 
-Copy and rename config.example.py to config.py
+1. Open your `http://127.0.0.1:5000/` in your browser
+1. Done!
 
-    cp ./mis/config.example.py ./mis/config.py
 
-Copy and rename uploads.example folder
+## Usage
 
-    cp -r ./mis/uploads.example ./mis/uploads
+- Run application
 
-Install initial data, createdb accepts one param, -initial (with example initial data)
+    `python manage.py runserver`
 
-    python manage.py createdb -i
+- Run application (with admin and debug enabled)
 
-# Run
+    `python manage.py runserver -a -d`
 
-Run server, runserver accept three params, -a (admin) -d (debug) -t (debug-toolbar)
+- Generate static assets
 
-    python manage.py runserver -a -d
-    
-Now, open 127.0.0.1:5000 in your browser. You can access the admin at 127.0.0.1:5000/admin
+    `python manage.py exporter export`
 
-# Build
+- Upload to S3
 
-Generate static files
+    `python manage.py s3 sync`
 
-    python manage.py build
-    
-A folder called build has now been created in mis
+This project also ships with a makefile that contains a couple of helper commands:
 
-# Deploy
+- `make run_dev`
+- `make run`
+- `make sync`
 
-Upload the files you just generated to aws.
 
-    python manage.py deploy
+## Git hooks
+
+These hooks will automatically bump the application version when using `git flow release ...`
+
+```
+ln -nfs $PWD/git-hooks/bump-version.sh .git/hooks/post-flow-release-start
+ln -nfs $PWD/git-hooks/bump-version.sh .git/hooks/post-flow-hotfix-start
+```
+
+## Contributing
+
+Want to contribute? Awesome. Just send a pull request.
