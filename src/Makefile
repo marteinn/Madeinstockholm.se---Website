@@ -14,6 +14,7 @@ run:
 
 export:
 	python manage.py exporter export
+	open blog
 
 sync:
 	python manage.py s3 sync
