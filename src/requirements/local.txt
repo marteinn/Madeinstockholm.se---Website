@@ -3,3 +3,4 @@
 
 # Add local extra requirements here (django-debug etc)
 pipdeptree==0.4.3
+neovim
