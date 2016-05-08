@@ -1,29 +1,22 @@
 .project-russiandance {
     background-color: @rd-background-color;
 
-    h3 {
+    .project__title {
         width: 95px;
         height: 95px;
 
         background-image: url(../img/russian-logo.svg);
         background-repeat: no-repeat;
         background-size: cover;
-
-        span {
-            display: none;
-        }
     }
 
-    p a {
+    .project__title-text {
+        display: none;
+    }
+
+    .project__description,
+    .project__description a {
         color: #000;
     }
 }
 
-@media only screen and (min-width: 700px) {
-    // russiandance {
-    .project-russiandance {
-        .content {
-            margin-left: (50px*2)+73px;
-        }
-    }
-}

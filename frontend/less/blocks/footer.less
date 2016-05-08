@@ -18,49 +18,99 @@
         color: @footer-text-color;
     }
 
-    .persons {
+    &__persons {
         overflow: auto;
         padding-top: 25px;
         padding-bottom: @margin;
+    }
 
-        .wrapper {
-            max-width: 360px;
-            margin-left: auto;
-            margin-right: auto;
+    &__persons-wrap{
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__person {
+        margin-left: 1%;
+        margin-right: 1%;
+        width: 48%;
+        float: right;
+        font-size: 0.75em;
+        font-family: @content-font;
+
+
+        &:first-child {
+            float: left;
+        }
+    }
+
+    &__person-avatar {
+        margin-bottom: 20px;
+    }
+
+    &__person-title {
+        font-weight: normal;
+    }
+
+    &__person-title,
+    &__person-description {
+        margin: 0;
+        line-height: 1.4;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__links {
+        margin-top: @margin;
+    }
+
+    &__links-item {
+        font-size: 0.75em;
+
+        &:hover {
+            text-decoration: underline;
         }
 
-        .person {
-            margin-left: 1%;
-            margin-right: 1%;
-            width: 48%;
-            float: right;
-            font-size: 0.75em;
-            font-family: @content-font;
+        &--fork {
+            text-align: center;
+            font-family: @title-font;
+            font-weight: normal;
+        }
+    }
+
+    &__links-item-link {
+        text-decoration: none;
+    }
+
+    &__links-item-icon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+}
 
 
-            &:first-child {
-                float: left;
-            }
+@media only screen and (min-width: 700px) {
+    .footer {
+        &__links {
+            margin: 0;
+        }
 
-            img {
-                margin-bottom: 20px;
-            }
+        &__links-item {
+            font-size: 1em;
 
-            h4 {
-                font-weight: normal;
-            }
-
-            h4,
-            p {
-                margin: 0;
-            }
-
-            a {
-                text-decoration: none;
-
-                &:hover {
-                    text-decoration: underline;
-                }
+            &--fork {
+                margin-right: @margin*2;
+                bottom: @margin*2;
+                position: absolute;
+                right: 0;
             }
         }
     }

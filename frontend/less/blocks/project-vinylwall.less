@@ -2,7 +2,7 @@
     // #gradient .horizontal(#43BFAD, #007BD7);
     background-color: @vw-background-color;
 
-    h3 {
+    .project__title {
         width: 73px;
         height: 40px;
 
@@ -11,60 +11,61 @@
         background-size: cover;
     }
 
-    h3 span {
+    .project__title-text {
         display: none;
     }
 
-    a {
+    .project__description a {
         color: @primary-color;
     }
 
-    .links ul {
+    .project__links-list {
         padding: 0;
         width: (160px*2)+10;
 
         .l-center();
         .clearfix();
+    }
 
-        li {
-            display: block;
+    .project__links-item {
+        display: block;
+    }
 
-            a {
-                width: 160px;
-                height: 52px;
-                display: block;
-                background-repeat: no-repeat;
+    .project__links-link {
+        width: 160px;
+        height: 52px;
+        display: block;
+        background-repeat: no-repeat;
 
-                span {
-                    display: none;
-                }
 
-                &.vw-ios {
-                    float: left;
-                    background-image: url(../img/store-button-ios.svg);
-                    background-size: cover;
-                }
-
-                &.vw-android {
-                    float: right;
-                    background-image: url(../img/store-button-android.svg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                }
-            }
+        &--vw-ios {
+            float: left;
+            background-image: url(../img/store-button-ios.svg);
+            background-size: cover;
         }
+
+        &--vw-android {
+            float: right;
+            background-image: url(../img/store-button-android.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .project__links-link-text {
+        display: none;
     }
 }
 
 
 @media only screen and (min-width: 320px) {
     .project-vinylwall {
-        .links ul {
+        .project__links-list {
             width: 160px;
+        }
 
-            .vw-ios {
-                margin-top: 10px;
-            }
+        .project__links-link--vw-ios {
+            margin-top: 10px;
         }
     }
 }
@@ -72,14 +73,12 @@
 
 @media only screen and (min-width: 360px) {
     .project-vinylwall {
-        .links {
-            ul {
-                width: (160px*2)+10;
+        .project__links-list {
+            width: (160px*2)+10;
+        }
 
-                .vw-ios {
-                    margin-top: 0px;
-                }
-            }
+        .project__links-link--vw-ios {
+            margin-top: 0px;
         }
     }
 }
@@ -87,18 +86,14 @@
 @media only screen and (min-width: 700px) {
     // vinylwall
     .project-vinylwall {
-        .content {
-            margin-left: (50px*2)+73px;
-        }
-
-        .image {
+        .project__image {
             margin: 0;
             float: left;
             width: 69%;
         }
 
-        h4,
-        p {
+        .project__sub-title,
+        .project__description {
             float: right;
             margin-left: 0;
             width: 30%;
@@ -109,13 +104,13 @@
 @media only screen and (min-width: 820px) {
     // vinylwall
     .project-vinylwall {
-        .links {
+        .project__links {
             margin-left: (50px*2)+73px;
             margin-right: 100px; // Inherited from .project
             overflow: auto;
         }
 
-        .links .holder {
+        .project__links-wrap {
             float: left;
             width: 69%;
         }

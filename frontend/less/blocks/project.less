@@ -2,19 +2,15 @@
     padding-top: @margin*2;
     padding-bottom: @margin*2;
 
-    p {
-        margin-bottom: 0;
-    }
-
-    .links {
+    &__links {
         margin-top: 50px;
     }
 
-    h3 {
+    &__title {
         margin: 0;
     }
 
-    h4 {
+    &__sub-title {
         margin: 0;
         display: block;
         font-family: @title-font;
@@ -23,8 +19,10 @@
         line-height: 1em;
     }
 
-    p {
+    &__description {
         font-family: @content-font;
+        margin-bottom: 0;
+        line-height: 1.4;
     }
 }
 
@@ -32,19 +30,19 @@
     .project {
         width: 100%;
 
-        h3 {
+        &__title {
             margin-left: auto;
             margin-right: auto;
         }
 
-        h4 {
+        &__sub-title {
           margin-top: 25px;
           text-align: center;
           margin-left: 25px;
           margin-right: 25px;
         }
 
-        .image {
+        &__image {
             margin-top: 25px;
             text-align: center;
             margin-right: 25px;
@@ -55,8 +53,7 @@
             }
         }
 
-
-        p {
+        &__description {
             margin-left: 25px;
             margin-right: 25px;
         }
@@ -65,38 +62,39 @@
 
 @media only screen and (min-width: 700px) {
     .project {
-        .wrapper {
+        &__wrap {
             max-width: @max-width;
             min-height: 350px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        h3 {
+        &__title {
             margin-left: 25px;
             position: absolute;
         }
 
-        .content {
+        &__content {
             .clearfix();
 
             margin-right: 50px*2;
+            margin-left: (50px*2)+73px;
         }
 
-        .image {
+        &__image {
             margin: 0;
             float: left;
             width: 69%;
         }
 
-        h4,
-        p {
+        &__sub-title,
+        &__description {
             float: right;
             margin: 0;
             width: 30%;
         }
 
-        h4 {
+        &__sub-title {
             font-size: 2em;
             text-align: left;
             margin: 0;
