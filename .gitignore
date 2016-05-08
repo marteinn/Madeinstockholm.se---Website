@@ -1,22 +1,33 @@
-# osx
+# OSX
 .DS_Store
 
-# Python
+# Python ignores
+__pycache__
 *.pyc
+
+# Ignore virtualenv files
+venv
+
+# Ignore all env files
+.env
+
+# SqlLite
 *.db
 
-# Virtualenv
-.Python
-bin
-lib
-include
-/doc/
-/node_modules/
-/components/
-/mis/config.py
-/mis/build/
-/mis/uploads/
-/.idea/
+# Project uploads
+/src/uploads
 
-# Project
-/mis/static/css/fonts/
+# Static folder
+/src/blog
+
+# AWS
+.boto
+
+# Temporary folders
+/tmp
+
+# JS
+node_modules
+
+# Ignore font files
+src/madeinstockholm/static/*

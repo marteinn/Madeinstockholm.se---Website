@@ -1,0 +1,59 @@
+{% extends "base.html"%}
+
+{% block header %}
+    {% include "partials/header.html" %}
+{% endblock %}
+
+{% block content %}
+    <section class="posts">
+        <article class="post post-intro">
+            <h2>{{ page.content }}</h2>
+        </article>
+    </section>
+
+    <section class="projects">
+        <h5>Projects</h5>
+
+        {% for project in projects %}
+            <article class="project project-{{ project.name }}">
+                <div class="wrapper">
+                    <h3><span>{{ project.title }}</span></h3>
+
+                    <div class="content">
+                        {% if project|has_post_images %}
+                        <div class="image">
+                            {% for image in project|post_images %}
+                                <img src="{{ url_for('uploaded_file', filename=image.guid) }}" />
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <h4><span>{{ project.excerpt }}</span></h4>
+                        <p>{{ project.content|safe }}</p>
+                    </div>
+
+                    {% if project|has_nav_menu_items %}
+                        <nav class="links">
+                            <div class="holder">
+                                <ul class="l-plain-list">
+                                    {% for item in project|nav_menu_items %}
+                                        <li>
+                                            <a href="{{ item.guide }}" class="{{ item.name }}">
+                                                <span>{{ item.title }}</span>
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </nav>
+                    {% endif %}
+                </div><!-- End wrapper -->
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}
+
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}

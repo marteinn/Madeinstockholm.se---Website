@@ -1,81 +1,54 @@
-Madeinstockholm.se - Website
-============================
-
-MadeInStockholm.se website, written in Python and Flask. We decided to open this project as an example on how you can utilize flask+flask-admin as a static site generator and to showcase a S3 deploy workflow.
-
-# Requirement
-You need to have Python, pip, virtualenv and node installed before proceeding.
+# MadeInStockholm.se
 
 
-# Installing
 
-Clone repository
+## Requirements
 
-    git clone git@github.com:marteinn/Madeinstockholm.se---Website.git
-
-Open
-
-    cd Madeinstockholm.se---Website
-
-Init virtualenv
-
-    virtualenv .
-
-Activate virtualenv
-
-    source bin/activate
-
-Install flask + related packages
-
-    pip install -r requirements.txt
+- Python 2.7
 
 
-Install grunt+bower
+## Getting started
 
-    npm install
+1. Install requirements
 
-Install bower packages
+    `pip install -r src/requirements/local.txt`
 
-    bower install
+1. Create database
 
-Copy bower packages
+    `python mange.py create_db`
 
-    grunt bower:install
+1. (Optional) Add sample data
 
-Compile less and js files
+    `python manage.py prefill fill`
 
-    grunt
+1. Start server
 
-Copy and rename config.example.py to config.py
+    `python manage.py runserver`
 
-    cp ./mis/config.example.py ./mis/config.py
+1. Open your `http://127.0.0.1:5000/` in your browser
+1. Done!
 
-Copy and rename uploads.example folder
+## Usage
 
-    cp -r ./mis/uploads.example ./mis/uploads
+- Run application
 
-Install initial data, createdb accepts one param, -initial (with example initial data)
+    `python manage.py runserver`
 
-    python manage.py createdb -i
+- Run application (with admin and debug enabled)
 
-# Run
+    `python manage.py runserver -a -d`
 
-Run server, runserver accept three params, -a (admin) -d (debug) -t (debug-toolbar)
+- Generate static assets
 
-    python manage.py runserver -a -d
-    
-Now, open 127.0.0.1:5000 in your browser. You can access the admin at 127.0.0.1:5000/admin
+    `python manage.py exporter export`
 
-# Build
+- Upload to S3
 
-Generate static files
+    `python manage.py s3 sync`
 
-    python manage.py build
-    
-A folder called build has now been created in mis
+This project also ships with a makefile that contains a couple of helper commands.
 
-# Deploy
 
-Upload the files you just generated to aws.
+## Contributing
 
-    python manage.py deploy
+Want to contribute? Awesome. Just send a pull request.

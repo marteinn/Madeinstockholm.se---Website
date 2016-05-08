@@ -1,0 +1,14 @@
+{
+  "name": "madeinstockholm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Sandström <martin@marteinn.se> (http://marteinn.se)",
+  "license": "ISC",
+  "devDependencies": {
+    "laravel-elixir": "^6.0.0-1"
+  }
+}
