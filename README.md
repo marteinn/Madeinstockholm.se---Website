@@ -1,5 +1,6 @@
 # MadeInStockholm.se
 
+This is the madeinstockholm.se website based on AtomicPress.
 
 
 ## Requirements
@@ -12,6 +13,15 @@
 1. Install requirements
 
     `pip install -r src/requirements/local.txt`
+
+1. Install frontend requirements
+
+	```
+	cd frontend
+	npm install
+	npm install gulp
+	gulp
+	```
 
 1. Create database
 
@@ -27,6 +37,7 @@
 
 1. Open your `http://127.0.0.1:5000/` in your browser
 1. Done!
+
 
 ## Usage
 
@@ -46,7 +57,11 @@
 
     `python manage.py s3 sync`
 
-This project also ships with a makefile that contains a couple of helper commands.
+This project also ships with a makefile that contains a couple of helper commands:
+
+- `make run_dev`
+- `make run`
+- `make sync`
 
 
 ## Contributing
