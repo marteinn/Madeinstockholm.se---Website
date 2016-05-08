@@ -5,11 +5,11 @@ from .base import *  # NOQA
 
 DEBUG = False
 SECRET_KEY = os.environ.get("SECRET_KEY")
-FREEZER_BASE_URL = "/blog/"
+FREEZER_BASE_URL = "/"
 STATIC_URL = os.path.join(FREEZER_BASE_URL, "static")
 UPLOADS_URL = os.path.join(FREEZER_BASE_URL, "uploads")
 GIST_BACKEND_RENDERING = False
-SITE_URL = "http://marteinn.se/blog"
+SITE_URL = "http://madeinstockholm.se"
 
 FREEZER_DESTINATION = os.path.join(PROJECT_ROOT, "blog")
 
