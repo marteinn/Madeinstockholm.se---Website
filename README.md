@@ -64,6 +64,15 @@ This project also ships with a makefile that contains a couple of helper command
 - `make sync`
 
 
+## Git hooks
+
+These hooks will automatically bump the application version when using `git flow release ...`
+
+```
+ln -nfs $PWD/git-hooks/bump-version.sh .git/hooks/post-flow-release-start
+ln -nfs $PWD/git-hooks/bump-version.sh .git/hooks/post-flow-hotfix-start
+```
+
 ## Contributing
 
 Want to contribute? Awesome. Just send a pull request.
