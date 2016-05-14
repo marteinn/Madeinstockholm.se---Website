@@ -68,12 +68,25 @@ This project also ships with a makefile that contains a couple of helper command
 
 ## Git hooks
 
-These hooks will automatically bump the application version when using `git flow release ...`
+## Bump version
+
+This hook will automatically bump the application version when using `git flow release ...`
+
 
 ```
+chmod +x $PWD/git-hooks/bump-version.sh
 ln -nfs $PWD/git-hooks/bump-version.sh .git/hooks/post-flow-release-start
 ln -nfs $PWD/git-hooks/bump-version.sh .git/hooks/post-flow-hotfix-start
 ```
+
+### Check pep8 pre-commit
+
+```
+chmod +x $PWD/git-hooks/pep8-pre-commit.sh
+ln -nfs $PWD/git-hooks/pep8-pre-commit.sh .git/hooks/pre-commit
+```
+
+
 
 ## Contributing
 
