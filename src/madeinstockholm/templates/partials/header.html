@@ -2,6 +2,10 @@
     <h1 class="header__title"><span class="header__title-text">{{ blog.title }}</span></h1>
     <nav class="header__menu contact">
         <ul class="header__menu-list">
+            {% if is_debug() %}
+                <li class="header__menu-item"><a class="header__menu-link" href="/admin/">Admin</a></li>
+            {% endif %}
+
             <li class="header__menu-item"><a class="header__menu-link" href="mailto:hello@madeinstockholm.se">Contact</a></li>
             <li class="header__menu-item"><a class="header__menu-link" href="http://twitter.com/misthlm">@misthlm</a></li>
         </ul>
