@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-marteinn.se
+madeinstockholm.se
 """
 
-__title__ = 'marteinnse'
-__version__ = '2.0.0'
-__build__ = 200
+__title__ = 'madeinstockholm'
+__version__ = '2.0.1'
+__build__ = 201
 __author__ = 'Martin Sandström'
+__license__ = 'MIT'
