@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/marteinn/Madeinstockholm.se---Website/badges/gpa.svg)](https://codeclimate.com/github/marteinn/Madeinstockholm.se---Website)
+
 # MadeInStockholm.se
 
 This is the madeinstockholm.se website based on AtomicPress.
