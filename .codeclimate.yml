@@ -16,6 +16,7 @@ ratings:
   - "**.py"
 exclude_paths:
   - "/src/requirements/*"
+  - "/frontend/js/lib/*"
   - "**/venv/**"
   - "**/tests/**"
   - "**/tests.py"
