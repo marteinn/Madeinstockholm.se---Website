@@ -1,0 +1,31 @@
+---
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - python
+      - javascript
+  fixme:
+    enabled: true
+  radon:
+    enabled: true
+  pep8:
+    enabled: true
+  eslint:
+    enabled: true
+ratings:
+  paths:
+  - "**.py"
+  - "**.js"
+exclude_paths:
+  - "/src/requirements/*"
+  - "/frontend/fonts/*"
+  - "/frontend/js/lib/*"
+  - "/frontend/img/*"
+  - "**/venv/**"
+  - "**/tests/**"
+  - "**/tests.py"
+  - "/blog/**"
+  - "/data/**"
+  - "/uploads/**"
