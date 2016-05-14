@@ -11,7 +11,6 @@ def nav_menu_items(post):
 
 @app.template_filter('has_nav_menu_items')
 def has_nav_menu_items(post):
-    # TODO: Make this more performant
     items = Post.query.filter(Post.parent == post,
                               Post.type == PostType.NAVIGATION_MENU)
 
@@ -27,7 +26,6 @@ def post_images(post):
 
 @app.template_filter('has_post_images')
 def has_post_images(post):
-    # TODO: Make this more performant
     items = Post.query.filter(Post.parent == post,
                               Post.type == PostType.ATTACHMENT)
 
