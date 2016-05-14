@@ -21,4 +21,94 @@
     .project__description a {
         color: #00D8D8;
     }
+
+    .project__links-list {
+        text-align: center;
+        padding: 0;
+        width: (160px*2)+10;
+
+        .l-center();
+        .clearfix();
+    }
+
+    .project__links-item {
+        display: inline-block;
+    }
+
+    .project__links-link {
+        width: 220px;
+        height: 52px;
+        background-repeat: no-repeat;
+
+        &--lc-mac {
+            float: left;
+            /*background-image: url(../img/store-button-ios.svg);*/
+            background-image: url(../img/store-button-lc.svg);
+            background-size: cover;
+        }
+    }
+
+    .project__links-link-text {
+        display: none;
+    }
 }
+
+
+@media only screen and (min-width: 320px) {
+    .project-logcabin {
+        .project__links-list {
+            width: 160px;
+        }
+
+        .project__links-link--lc-mac {
+            margin-top: 10px;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 360px) {
+    .project-logcabin {
+        .project__links-list {
+            width: (160px*2)+10;
+        }
+
+        .project__links-link--vw-ios {
+            margin-top: 0px;
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    // logcabin
+    .project-logcabin {
+        .project__image {
+            margin: 0;
+            float: left;
+            width: 69%;
+        }
+
+        .project__sub-title,
+        .project__description {
+            float: right;
+            margin-left: 0;
+            width: 30%;
+        }
+    }
+}
+
+@media only screen and (min-width: 820px) {
+    // logcabin
+    .project-logcabin {
+        .project__links {
+            margin-left: (50px*2)+73px;
+            margin-right: 100px; // Inherited from .project
+        }
+
+        .project__links-wrap {
+            width: 69%;
+        }
+    }
+}
+
+
