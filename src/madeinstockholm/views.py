@@ -20,7 +20,7 @@ def start():
                            )
 
 
-@theme.route('/pages/<string:name>/')
+@theme.route('/<string:name>/')
 def show_page(name):
     blog = Blog.query.all()[0]
     page = Post.query.filter(Post.name == name)[0]
