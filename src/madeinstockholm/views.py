@@ -1,6 +1,5 @@
 from flask import render_template
-from sqlalchemy import desc, asc, func
-from atomicpress.models import Blog, Post, PostType, Category, Tag
+from atomicpress.models import Blog, Post, PostType
 
 from madeinstockholm import theme, helpers
 
@@ -18,9 +17,4 @@ def start():
                            blog=blog,
                            page=start_page,
                            projects=projects,
-                           # posts=posts,
-                           # projects=projects,
-                           # persons=persons,
-                           # ga_account=config.GA_TRACKING_ID,
-                           # site_description=site.description,
                            )
