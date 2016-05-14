@@ -17,8 +17,9 @@ except Exception, e:
 
 os.environ.setdefault("ATOMICPRESS_SETTINGS", "settings.prod")
 
-from atomicpress import app
-app.setup()
 
 if __name__ == "__main__":
+    from atomicpress import app  # NOQA
+
+    app.setup()
     app.run()
