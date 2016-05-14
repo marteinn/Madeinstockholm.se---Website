@@ -1,0 +1,24 @@
+---
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - python
+  fixme:
+    enabled: true
+  radon:
+    enabled: true
+  pep8:
+    enabled: true
+ratings:
+  paths:
+  - "**.py"
+exclude_paths:
+  - "/src/requirements/*"
+  - "**/venv/**"
+  - "**/tests/**"
+  - "**/tests.py"
+  - "/blog/**"
+  - "/data/**"
+  - "/uploads/**"
