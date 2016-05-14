@@ -18,3 +18,14 @@ def start():
                            page=start_page,
                            projects=projects,
                            )
+
+
+@theme.route('/pages/<string:name>/')
+def show_page(name):
+    blog = Blog.query.all()[0]
+    page = Post.query.filter(Post.name == name)[0]
+
+    return render_template("pages/page.html",
+                           blog=blog,
+                           page=page,
+                           )
